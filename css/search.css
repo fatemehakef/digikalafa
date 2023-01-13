@@ -1,0 +1,57 @@
+header>div.top>div.searchBoxLeft{
+    display: inline-block;
+    width: 199.25px;
+    height: 44px;
+    padding: 2px 0;
+}
+header>div.top>div.searchBoxLeft>div.login{
+    width: 134.25px;
+    height: 40px;
+    display: inline-block;
+    border: 1px solid rgb(224 , 224, 226);
+    border-radius: 10px;
+    vertical-align: top;
+    
+}
+header>div.top>div.searchBoxLeft>div.login>a{
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+    text-decoration: none;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 40px;
+    color: #0c0c0c;
+}
+header>div.top>div.searchBoxLeft>div.login>a>span{
+    display: inline-block;
+    margin-left: 10px;
+    transform: rotateY(180deg);
+}
+header>div.top>div.searchBoxLeft>span.vLine{
+    width: auto;
+    height: auto;
+    color: rgb(224 , 224, 226);
+    font-size: 32px;
+    line-height: 40px;
+    padding: 0 5px ;
+}
+header>div.top>div.searchBoxLeft>div.checkOut{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+
+}
+header>div.top>div.searchBoxLeft>div.checkOut>a{
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+}
+header>div.top>div.searchBoxLeft>div.checkOut>a>span{
+    display: inline-block;
+    transform:rotateY(180deg);
+    font-size: 20px;
+    color: rgb(67, 71, 79);
+    line-height: 40px;
+}

@@ -1,0 +1,69 @@
+#chosen {
+    margin-top: 25px;
+  }
+  #chosen h1 {
+    font-size: 25px;
+    margin-bottom: 25px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 35px;
+  }
+  #chosen .gird5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 0 auto;
+    width: 95%;
+    gap: 1px;
+    direction: rtl;
+  }
+  #chosen .gird5 .box {
+    margin: 0 auto;
+    width: 100%;
+    background-color: #fff;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  #chosen .gird5 .box:nth-child(1) {
+    border-right: none;
+  }
+  #chosen .gird5 .box:nth-child(6) {
+    border-right: none;
+  }
+  #chosen .gird5 .box:nth-child(11) {
+    border-right: none;
+  }
+  #chosen .gird5 .box .img {
+    margin: 0 auto;
+    width: 70%;
+  }
+  #chosen .gird5 .box .price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-decoration: none;
+  }
+  #chosen .gird5 .box .price p {
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  #chosen .gird5 .box .price p:first-child {
+    background: #ef394e;
+    padding: 5px;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 12px;
+  }
+  #chosen .gird5 .box a {
+    padding: 5px;
+    width: 100%;
+  }
+  #chosen .gird5 .box a img {
+    width: 100%;
+  }
+  #chosen .chosen {
+    border: 1px solid #e5e5e5;
+    border-radius: 15px;
+    margin: 0 auto;
+    width: 95%;
+  }
+  

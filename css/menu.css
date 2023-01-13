@@ -1,0 +1,4029 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    min-height: 2000px;
+  }
+  
+  
+  div.menu {
+    width: 100%;
+    height: 40px;
+    top: 105px;
+    background-color: white;
+    position: fixed;
+    z-index: 4;
+    direction: rtl;
+
+  }
+  div.menu > nav {
+    width: inherit;
+    height: inherit;
+  
+  }
+  div.menu > nav > ul {
+    list-style: none;
+    width: inherit;
+    height: inherit;
+    padding-right: 25px;
+    display: inline-block;
+  }
+  div.menu > nav > ul > li {
+    width: auto;
+    height: inherit;
+    display: inline-block;
+  }
+  
+  
+  
+  div.menu > nav > ul > li > a {
+    display: inline-block;
+    width: auto;
+    padding: 0 10px;
+    line-height: 40px;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  div.menu > nav > ul > li >div.vl{
+    display: inline-block;
+    border-left: 2px solid rgb(185, 183, 183);
+    height: 25px;
+    margin-top: 7px;
+    vertical-align: top;
+  
+  
+  }
+  div.menu > nav > ul > li > ul {
+    list-style: none;
+    width: inherit;
+    height: inherit;
+    padding-right: 25px;
+    display: inline-block;
+  }
+  div.menu > nav > ul > li > ul > li {
+    width: auto;
+    height: inherit;
+    display: inline-block;
+  }
+ 
+  div.menu > nav > ul > li > ul > li > a {
+    display: block;
+    width: auto;
+    padding: 0 10px;
+    line-height: 40px;
+    text-decoration: none;
+    color: rgb(134, 131, 131);
+    font-size: 16px;
+    /* font-weight: bold; */
+  }
+  
+  div.menu > nav > ul > li > a:nth-of-type(2),
+  div.menu > nav > ul > li > a:nth-of-type(3),
+  div.menu > nav > ul > li > a:nth-of-type(4),
+  div.menu > nav > ul > li > a:nth-of-type(5),
+  div.menu > nav > ul > li > a:nth-of-type(6),
+  div.menu > nav > ul > li > a:nth-of-type(7),
+  div.menu > nav > ul > li > a:nth-of-type(8) {
+    color: rgb(110, 110, 113);
+    font-size: 14px;
+  }
+  div.menu > nav > ul > li > a:nth-of-type(1):hover,
+  div.menu > nav > ul > li > a:nth-of-type(2):hover,
+  div.menu > nav > ul > li > a:nth-of-type(3):hover,
+  div.menu > nav > ul > li > a:nth-of-type(4):hover,
+  div.menu > nav > ul > li > a:nth-of-type(5):hover,
+  div.menu > nav > ul > li > a:nth-of-type(6):hover,
+  div.menu > nav > ul > li > a:nth-of-type(7):hover {
+    border-bottom: 0.2rem solid red;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  div.menu > nav > ul > li > label[for="city"] {
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    color: rgb(110, 110, 113);
+    font-size: 14px;
+    margin: 0 240px;
+    vertical-align: top;
+    text-align: center;
+    cursor: pointer;
+  
+  }
+  #city , #hide{
+      display: none;
+      position: fixed;
+  }
+  #city:checked ~ div.city {
+      left: 0;
+      transform: scale(1,1);
+      -webkit-transform: scale(1,1);
+      -moz-transform: scale(1,1);
+      -ms-transform: scale(1,1);
+      -o-transform: scale(1,1);
+  }
+  #city:checked ~ div.city>div.select{
+      transform: scale(1,1);
+      -webkit-transform: scale(1,1);
+      -moz-transform: scale(1,1);
+      -ms-transform: scale(1,1);
+      -o-transform: scale(1,1);
+  }
+  
+  
+  
+  
+  
+  #hide:checked ~ div.city{
+   transform: scale(0,0)   ;
+   -webkit-transform: scale(0,0)   ;
+   -moz-transform: scale(0,0)   ;
+   -ms-transform: scale(0,0)   ;
+   -o-transform: scale(0,0)   ;
+  }
+  #hide:checked ~ div.city>div.select{
+    transform: scale(0,0);
+    -webkit-transform: scale(0,0);
+    -moz-transform: scale(0,0);
+    -ms-transform: scale(0,0);
+    -o-transform: scale(0,0);
+  }
+  
+  
+  
+  
+  
+  div.city{
+      width: 100%;
+      height: 100vh;
+      left: 0;
+      top: 0;
+      transform: scale(0,0);
+      -webkit-transform: scale(0,0);
+      -moz-transform: scale(0,0);
+      -ms-transform: scale(0,0);
+      -o-transform: scale(0,0);
+      z-index: 2;
+      position: fixed;   
+  }
+  div.city>div.select{
+      width: 450px;
+      height: 430px;
+      background-color: white;
+      left: calc(50% - 450px/2);
+      top: calc(50% - 253px/2);
+      transform: scale(0,0);
+      -webkit-transform: scale(0,0);
+      -moz-transform: scale(0,0);
+      -ms-transform: scale(0,0);
+      -o-transform: scale(0,0);
+    overflow: scroll;
+    z-index: 2;
+    position: fixed;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px ;
+  
+  
+  
+      
+  }
+  
+  
+  
+  div.menu>nav>ul>li>div.city>div.se{
+    width: 450px;
+    height: 50px;
+    line-height: 50px;
+    background-color: white;
+    padding: 0 20px;
+    position: fixed;
+    left: calc(50% - 450px/2);
+    bottom: 450px;
+    z-index: 3;
+    border-top-right-radius:10px ;
+    border-top-left-radius: 10px;
+    box-shadow: 0 2px 0 rgb(232, 231, 231);
+  
+   
+  }
+  div.menu>nav>ul>li>div.city>div.se>p{
+    display: inline-block;
+    width: 450px;
+    height: 50px;
+    line-height: 50px;
+    background-color: white;
+    padding: 0 20px;
+    position: fixed;
+    left: calc(50% - 450px/2);
+    bottom: 450px;
+    z-index: 3;
+    border-top-right-radius:10px ;
+    border-top-left-radius: 10px;
+  
+  
+  }
+  div.city>div.se>label[for=hide]{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    position: fixed;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    line-height: 40px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 35px;
+    left: calc(50% - 450px/2);
+    bottom: 450px;
+    z-index: 3;
+    
+  }
+  
+  
+  
+  
+  
+  
+  
+  div.menu>nav>ul>li>div.city>div.select>ul{
+    width: 430px;
+    height: auto;
+    list-style: none;
+  }
+  
+  
+  
+  
+  
+  div.menu>nav>ul>li>div.city>div.select>ul>li{
+    display: block;
+    width: 430px;
+    height: 50px;
+    line-height: 50px;
+    background-color: white;
+    /* margin-bottom: 5px; */
+    padding: 0 20px;
+  
+  }
+  
+  
+  
+  div.menu>nav>ul>li>div.city>div.select>ul>li>a{
+    display: inline;
+    width: inherit;
+    text-decoration: none;
+    color: black;
+  }
+  div.menu>nav>ul>li>div.city>div.select>ul>li:nth-of-type(1){
+    padding: 60px 20px;
+    color: #19BFD3;
+  }
+  div.menu>nav>ul>li>div.city>div.select>ul>li:nth-of-type(1)>a{
+    color: #19BFD3;
+  
+  }
+  div.menu>nav>ul>li>div.city>div.select>ul>hr{
+    width: 410px;
+    margin-right: 10px;
+    size: 2;
+    color: lightgray;
+    border-top: 1px solid lightgray;
+    background-color: lightgrey;
+  }
+  
+  div.menu>nav>ul>li>div.city>div.select>ul>li>a:nth-of-type(2){
+    display:inline;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    line-height: 50px;
+    text-align: center;
+    color: rgb(161, 159, 159);
+    font-weight: bold;
+    font-size: 15px;
+    margin-right: 380px;
+  }
+  
+  
+  
+  
+  
+  
+  div.menu > nav > ul > li > div.submenu {
+    width: calc(100vw - 50px);
+    position: absolute;
+    height: 500px;
+    background-color: white;
+    left: calc(50% - calc(100vw - 50px) / 2);
+    display: none;
+    overflow: scroll;
+    z-index: 2;
+  
+  }
+  
+  
+  div.menu > nav > ul > li > a:nth-of-type(1):hover ~ div.submenu {
+    display: block;
+  }
+  div.menu > nav > ul > li > div.submenu:hover {
+    display: block;
+  
+  }
+  
+  div.menu > nav > ul > li > div.submenu > ul {
+    width: 15%;
+    height: inherit;
+    list-style: none;
+    display: block;
+  }
+  div.menu > nav > ul > li > div.submenu > ul > li {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 2px;
+    display: inline-block;
+  }
+  div.menu > nav > ul > li > div.submenu > ul > li:hover {
+    width: 100%;
+    height: auto;
+    background-color: lightgray;
+  }
+  div.menu > nav > ul > li > div.submenu > ul > li:hover > a {
+    color: crimson;
+  }
+  
+  div.menu > nav > ul > li > div.submenu > ul > li > a {
+    display: inline;
+    width: inherit;
+    height: inherit;
+    text-decoration: none;
+    text-align: right;
+    line-height: 40px;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    padding: 0;
+    font-weight: bold;
+  }
+  
+
+
+
+/* <menu> */
+/* <mobile> */
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile{
+  width: 85%;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  left: 0;
+  top: 0;
+  display: block;
+
+
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>a{
+  display: block;
+  width: 100%;
+  height: 40px;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.a,
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.b,
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.c,
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.d {
+  width: 22%;
+  display: inline-block;
+  height: inherit;
+  background-color: white;
+  vertical-align: top;
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.a>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.a>ul>li{
+  width: 100%;
+  height: 40px;
+  margin-bottom: 2px;
+  display: inline-block;
+
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.a>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.a>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.a>ul>li>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.a>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.a>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.a>ul>li>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.a>ul>li>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.a>ul>li>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.a>ul>li>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+
+
+
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.b>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.b>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.b>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.b>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.b>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.b>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.b>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.b>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+
+
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.c>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.c>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.c>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.c>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.c>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.c>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.c>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.c>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.d>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.d>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.d>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.d>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.d>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.d>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.d>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mobile>div.d>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+/* <kala> */
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala{
+  width: 85%;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  left: 0;
+  top: 0;
+  display: none;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li:hover>div.kala{
+  width: 85%;
+  height: 100%;
+  display: block;
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>a{
+  display: block;
+  width: 100%;
+  height: 40px;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.a,
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.b,
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.c,
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.d {
+  width: 22%;
+  display: inline-block;
+  height: inherit;
+  background-color: white;
+  vertical-align: top;
+}
+
+
+
+
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.a>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.a>ul>li{
+  width: 100%;
+  height: 40px;
+  margin-bottom: 2px;
+  display: inline-block;
+
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.a>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.a>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.a>ul>li>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.a>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.a>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.a>ul>li>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.a>ul>li>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.a>ul>li>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.a>ul>li>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.b>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.b>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.b>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.b>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.b>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.b>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.b>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.b>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.c>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.c>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.c>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.c>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.c>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.c>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.c>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.c>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.d>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.d>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.d>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.d>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.d>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.d>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.d>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.kala>div.d>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+/* <car> */
+div.menu>nav>ul>li>div.submenu>ul>li>div.car{
+  width: 85%;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  left: 0;
+  top: 0;
+  display: none;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li:hover>div.car{
+  width: 85%;
+  height: 100%;
+  display: block;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>a{
+  display: block;
+  width: 100%;
+  height: 40px;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.a,
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.b,
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.c,
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.d {
+  width: 22%;
+  display: inline-block;
+  height: inherit;
+  background-color: white;
+  vertical-align: top;
+}
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.a>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.a>ul>li{
+  width: 100%;
+  height: 40px;
+  margin-bottom: 2px;
+  display: inline-block;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.a>ul>li:hover>a{
+  width: 100%;
+  height: 40px;
+  color: red;
+}
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.a>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 20px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.a>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.a>ul>li>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.a>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.a>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.a>ul>li>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.a>ul>li>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.a>ul>li>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.a>ul>li>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.b>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.b>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.b>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.b>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.b>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.b>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.b>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.b>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.c>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.c>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.c>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.c>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.c>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.c>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.c>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.c>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.d>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.d>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.d>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.d>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.d>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.d>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.d>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.car>div.d>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+/* <mode> */
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode{
+  width: 85%;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  left: 0;
+  top: 0;
+  display: none;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li:hover>div.mode{
+  width: 85%;
+  height: 100%;
+  display: block;
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>a{
+  display: block;
+  width: 100%;
+  height: 40px;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.a,
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.b,
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.c,
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.d {
+  width: 22%;
+  display: inline-block;
+  height: inherit;
+  background-color: white;
+  vertical-align: top;
+}
+
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.a>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.a>ul>li{
+  width: 100%;
+  height: 40px;
+  margin-bottom: 2px;
+  display: inline-block;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.a>ul>li:hover>a{
+  width: 100%;
+  height: 40px;
+  color: red;
+}
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.a>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 20px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.a>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.a>ul>li>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.a>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.a>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.a>ul>li>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.a>ul>li>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.a>ul>li>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.a>ul>li>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.b>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.b>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.b>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.b>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.b>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.b>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.b>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.b>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.c>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.c>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.c>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.c>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.c>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.c>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.c>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.c>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.d>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.d>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.d>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.d>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.d>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.d>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.d>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mode>div.d>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+/* <market> */
+div.menu>nav>ul>li>div.submenu>ul>li>div.market{
+  width: 85%;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  left: 0;
+  top: 0;
+  display: none;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li:hover>div.market{
+  width: 85%;
+  height: 100%;
+  display: block;
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>a{
+  display: block;
+  width: 100%;
+  height: 40px;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.a,
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.b,
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.c,
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.d {
+  width: 22%;
+  display: inline-block;
+  height: inherit;
+  background-color: white;
+  vertical-align: top;
+}
+
+
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.a>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.a>ul>li{
+  width: 100%;
+  height: 40px;
+  margin-bottom: 2px;
+  display: inline-block;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.a>ul>li:hover>a{
+  width: 100%;
+  height: 40px;
+  color: red;
+}
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.a>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 20px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.a>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.a>ul>li>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.a>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.a>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.a>ul>li>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.a>ul>li>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.a>ul>li>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.a>ul>li>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.b>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.b>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.b>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.b>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.b>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.b>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.b>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.b>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.c>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.c>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.c>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.c>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.c>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.c>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.c>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.c>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.d>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.d>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.d>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.d>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.d>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.d>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.d>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.market>div.d>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+/* <toy> */
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy{
+  width: 85%;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  left: 0;
+  top: 0;
+  display: none;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li:hover>div.toy{
+  width: 85%;
+  height: 100%;
+  display: block;
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>a{
+  display: block;
+  width: 100%;
+  height: 40px;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.a,
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.b,
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.c,
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.d {
+  width: 22%;
+  display: inline-block;
+  height: inherit;
+  background-color: white;
+  vertical-align: top;
+}
+
+
+
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.a>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.a>ul>li{
+  width: 100%;
+  height: 40px;
+  margin-bottom: 2px;
+  display: inline-block;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.a>ul>li:hover>a{
+  width: 100%;
+  height: 40px;
+  color: red;
+}
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.a>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 20px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.a>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.a>ul>li>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.a>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.a>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.a>ul>li>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.a>ul>li>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.a>ul>li>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.a>ul>li>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.b>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.b>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.b>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.b>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.b>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.b>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.b>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.b>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.c>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.c>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.c>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.c>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.c>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.c>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.c>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.c>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.d>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.d>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.d>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.d>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.d>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.d>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.d>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.toy>div.d>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+/* <mahsoul> */
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul{
+  width: 85%;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  left: 0;
+  top: 0;
+  display: none;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li:hover>div.mahsoul{
+  width: 85%;
+  height: 100%;
+  display: block;
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>a{
+  display: block;
+  width: 100%;
+  height: 40px;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.a,
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.b,
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.c,
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.d {
+  width: 22%;
+  display: inline-block;
+  height: inherit;
+  background-color: white;
+  vertical-align: top;
+}
+
+
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.a>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.a>ul>li{
+  width: 100%;
+  height: 40px;
+  margin-bottom: 2px;
+  display: inline-block;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.a>ul>li:hover>a{
+  width: 100%;
+  height: 40px;
+  color: red;
+}
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.a>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 20px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.a>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.a>ul>li>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.a>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.a>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.a>ul>li>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.a>ul>li>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.a>ul>li>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.a>ul>li>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.b>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.b>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.b>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.b>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.b>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.b>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.b>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.b>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.c>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.c>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.c>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.c>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.c>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.c>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.c>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.c>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.d>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.d>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.d>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.d>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.d>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.d>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.d>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.mahsoul>div.d>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+/* <beauty> */
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty{
+  width: 85%;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  left: 0;
+  top: 0;
+  display: none;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li:hover>div.beauty{
+  width: 85%;
+  height: 100%;
+  display: block;
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>a{
+  display: block;
+  width: 100%;
+  height: 40px;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.a,
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.b,
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.c,
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.d {
+  width: 22%;
+  display: inline-block;
+  height: inherit;
+  background-color: white;
+  vertical-align: top;
+}
+
+
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.a>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.a>ul>li{
+  width: 100%;
+  height: 40px;
+  margin-bottom: 2px;
+  display: inline-block;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.a>ul>li:hover>a{
+  width: 100%;
+  height: 40px;
+  color: red;
+}
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.a>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 20px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.a>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.a>ul>li>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.a>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.a>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.a>ul>li>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.a>ul>li>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.a>ul>li>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.a>ul>li>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.b>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.b>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.b>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.b>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.b>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.b>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.b>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.b>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.c>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.c>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.c>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.c>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.c>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.c>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.c>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.c>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.d>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.d>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.d>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.d>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.d>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.d>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.d>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.beauty>div.d>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+/* <home> */
+div.menu>nav>ul>li>div.submenu>ul>li>div.home{
+  width: 85%;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  left: 0;
+  top: 0;
+  display: none;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li:hover>div.home{
+  width: 85%;
+  height: 100%;
+  display: block;
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>a{
+  display: block;
+  width: 100%;
+  height: 40px;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.a,
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.b,
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.c,
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.d,
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.f{
+  width: 18%;
+  display: inline-block;
+  height: inherit;
+  background-color: white;
+  vertical-align: top;
+}
+
+
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.a>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.a>ul>li{
+  width: 100%;
+  height: 40px;
+  margin-bottom: 2px;
+  display: inline-block;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.a>ul>li:hover>a{
+  width: 100%;
+  height: 40px;
+  color: red;
+}
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.a>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 20px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.a>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.a>ul>li>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.a>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.a>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.a>ul>li>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.a>ul>li>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.a>ul>li>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.a>ul>li>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.b>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.b>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.b>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.b>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.b>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.b>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.b>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.b>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.c>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.c>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.c>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.c>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.c>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.c>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.c>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.c>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.d>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.d>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.d>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.d>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.d>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.d>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.d>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.d>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.f>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.f>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.f>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.f>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.d>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.f>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.f>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.home>div.f>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+/* <book> */
+div.menu>nav>ul>li>div.submenu>ul>li>div.book{
+  width: 85%;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  left: 0;
+  top: 0;
+  display: none;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li:hover>div.book{
+  width: 85%;
+  height: 100%;
+  display: block;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>a{
+  display: block;
+  width: 100%;
+  height: 40px;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.a,
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.b,
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.c,
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.d {
+  width: 22%;
+  display: inline-block;
+  height: 510px;
+  background-color: white;
+  vertical-align: top;
+}
+
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.a>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.a>ul>li{
+  width: 100%;
+  height: 40px;
+  margin-bottom: 2px;
+  display: inline-block;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.a>ul>li:hover>a{
+  width: 100%;
+  height: 40px;
+  color: red;
+}
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.a>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 20px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.a>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.a>ul>li>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.a>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.a>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.a>ul>li>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.a>ul>li>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.a>ul>li>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.a>ul>li>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.b>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.b>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.b>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.b>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.b>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.b>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.b>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.b>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.c>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.c>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.c>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.c>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.c>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.c>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.c>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.c>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.d>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.d>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.d>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.d>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.d>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.d>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.d>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.book>div.d>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+/* <sport> */
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport{
+  width: 85%;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  left: 0;
+  top: 0;
+  display: none;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li:hover>div.sport{
+  width: 85%;
+  height: 100%;
+  display: block;
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>a{
+  display: block;
+  width: 100%;
+  height: 40px;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.a,
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.b,
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.c,
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.d {
+  width: 22%;
+  display: inline-block;
+  height: 550px;
+  background-color: white;
+  vertical-align: top;
+}
+
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.a>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.a>ul>li{
+  width: 100%;
+  height: 40px;
+  margin-bottom: 2px;
+  display: inline-block;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.a>ul>li:hover>a{
+  width: 100%;
+  height: 40px;
+  color: red;
+}
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.a>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 20px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.a>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.a>ul>li>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.a>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.a>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.a>ul>li>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.a>ul>li>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.a>ul>li>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.a>ul>li>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.b>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.b>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.b>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.b>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.b>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.b>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.b>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.b>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.c>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.c>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.c>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.c>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.c>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.c>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.c>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.c>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+
+
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.d>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.d>ul>li{
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.d>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 40px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.d>ul>li:hover>a{
+  color: red;
+}
+
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.d>ul>li>ul{
+  width: 100%;
+  height: inherit;
+  list-style: none;
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.d>ul>li>ul>li{
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+
+}
+
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.d>ul>li>ul>li>a{
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-decoration:none ;
+  text-align: right;
+  line-height: 30px;
+  color: rgb(109, 106, 106);
+  font-size: 14px;
+  padding: 0 10px;
+
+}
+div.menu>nav>ul>li>div.submenu>ul>li>div.sport>div.d>ul>li>ul>li:hover>a{
+  color: red;
+}
+
+/* <end menu> */
+
